@@ -1,4 +1,4 @@
-package demo.httpclients.clients.ahc;
+package demo.httpclients.concurrency.clients;
 
 import static org.asynchttpclient.Dsl.asyncHttpClient;
 import static org.asynchttpclient.Dsl.post;
@@ -20,7 +20,7 @@ public class AhcConcurrentClient {
         
         Future<Response>[] futures = (Future<Response>[])new Future[concurrency];
         for (int i = 0; i < concurrency; ++i) {
-            Request request = post("http://localhost:8999/wait")
+            Request request = post("http://localhost:8181/wait")
                     .setMethod("GET")
                     .setHeader("Content-type", "text/plain")
                     .setRequestTimeout(-1 )

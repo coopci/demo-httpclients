@@ -1,4 +1,4 @@
-package demo.httpclients.server;
+package demo.httpclients.concurrency.server;
 
 import org.glassfish.grizzly.http.server.HttpHandler;
 import org.glassfish.grizzly.http.server.HttpServer;
